@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  django:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./stock_keeper:/code
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+
+  postgres:
+    container_name: db
+    image: postgres:latest
+    env_file:
+      - .env
+    volumes:
+      - ./docker/postgresql/data:/var/lib/postgresql/data/
+    restart: always
+
+  worker:
+    build: .
+    command: celery -A stock_keeper worker -l info -n worker
+    volumes:
+      - ./stock_keeper:/code
+    depends_on:
+      - django
+      - redis
+    env_file:
+      - .env
+
+  redis:
+    image: "redis:alpine"
