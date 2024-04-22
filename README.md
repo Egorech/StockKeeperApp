@@ -24,6 +24,16 @@
 Схема БД:
 ![image](https://github.com/Egorech/StockKeeperApp/assets/90097022/f79e0fd0-23c6-4d03-b72c-04816cc39aa0)
 
+Админ панель:
+![image](https://github.com/Egorech/StockKeeperApp/assets/90097022/2e6b2d3e-c5eb-4e5a-94cb-b54f1275e961)
+
+Скрины приложения:
+![image](https://github.com/Egorech/StockKeeperApp/assets/90097022/08fb0ff7-5549-4155-8ce0-8185768d0d27)
+![image](https://github.com/Egorech/StockKeeperApp/assets/90097022/16a86446-9bed-45fc-8932-1110347ee3c3)
+![image](https://github.com/Egorech/StockKeeperApp/assets/90097022/257ca8bb-873e-4b58-936e-c014e775c18f)
+![image](https://github.com/Egorech/StockKeeperApp/assets/90097022/a0a0fc7c-cbca-4cfc-83b8-6fd2b3aebed4)
+
+
 
 1) Таблица User хранит информацию о никнейме, пароле, имени, фамилии, почте.
 2) Таблица StorageLocation хранит информацию о имени и максимальном весе хранилища
@@ -35,6 +45,7 @@
 1) git clone https://github.com/Egorech/StockKeeperApp.git
 2) docker compose build
 3) docker compose up
+4) python manage.py migrate
 5) http://localhost:8000/
 
 <strong>(Важно отметить, что для корректной работы с Docker нужен запущенный docker engine, в качестве решения можете скачать Docker Desktop по ссылке: https://www.docker.com/products/docker-desktop/)</strong>
