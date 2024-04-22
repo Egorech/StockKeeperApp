@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from stock_keeper.yasg import urlpatterns as doc_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,3 +24,5 @@ urlpatterns = [
     path('', include('users.urls')),
     path('v1/inventory_management/', include('inventory_management.urls')),
 ]
+
+urlpatterns += doc_urls

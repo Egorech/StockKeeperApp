@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_celery_results',
     'rest_framework',
+    'drf_yasg',
     'users.apps.UsersConfig',
     'inventory_management.apps.InventoryManagementConfig'
 ]

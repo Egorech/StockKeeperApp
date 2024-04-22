@@ -1,4 +1,3 @@
-from rest_framework import permissions, generics
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.exceptions import NotFound, PermissionDenied
 from rest_framework.permissions import IsAuthenticated
@@ -71,7 +70,7 @@ def create_calculate_total_weight_task(request):
     return Response({'task_id': task.id})
 
 
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 @permission_classes((IsAuthenticated,))
 def task_result(request, task_id):
     user = request.user
