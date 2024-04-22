@@ -33,6 +33,8 @@
 ![image](https://github.com/Egorech/StockKeeperApp/assets/90097022/257ca8bb-873e-4b58-936e-c014e775c18f)
 ![image](https://github.com/Egorech/StockKeeperApp/assets/90097022/a0a0fc7c-cbca-4cfc-83b8-6fd2b3aebed4)
 
+Swagger, используя drf-yasg:
+![image](https://github.com/Egorech/StockKeeperApp/assets/90097022/a7051e67-73a5-425c-b459-cb420e2ea8a6)
 
 
 1) Таблица User хранит информацию о никнейме, пароле, имени, фамилии, почте.
